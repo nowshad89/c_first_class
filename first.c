@@ -93,3 +93,68 @@
 //     printf("%lf", c);
 // }
 
+
+// logical operator 1) logcal and(&&) 2) logical or (||)
+// conditional stament
+// #include<stdio.h>
+// int main()
+// {
+//     int taka;
+//     scanf("%d", &taka);
+//     if(taka >= 100)
+//     {
+//         printf("burger khabo");
+//     }
+//     else
+//     {
+//         printf("burger jindegote khaitamna");
+//     }
+//     return 0;
+// }
+
+//if else ledder in c(else if thakle that is called if else ledder)
+// #include<stdio.h>
+// int main()
+// {
+//     int taka;
+//     scanf("%d", &taka);
+//     if(taka >= 100)
+//     {
+//         printf("burger");
+//     }
+//     else if(taka >= 50)
+//     {
+//         printf("fuchka khab0");
+
+//     }
+//     else
+//     {
+//         printf("kiccchu khaitamna");
+//     }
+// } 
+
+// nested else if
+#include<stdio.h>
+int main()
+{
+    int taka;
+    scanf("%d", &taka);
+    if (taka >= 5000)
+    {
+        printf("cox jabo\n");
+        if(taka >= 10000)
+        {
+            printf("saintmartin jabo\n");
+        }
+        else
+        {
+            printf("saint jabo na\n");
+        }
+    }
+    else
+    {
+        printf("cox jabo na\n");
+    }
+    
+    return 0;
+}
