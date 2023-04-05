@@ -231,27 +231,114 @@
 // Now, if you know the amount of money she has, can you tell which item/items she will buy?
 // See the sample input and output for more clarification.
 
-#include<stdio.h>
-int main()
-{
-    int a;
-    scanf("%d", &a);
-    if(a >=10000)
-    {
-        printf("Gucchi Bag\n");
-        if(a > 20000)
-        {
-            printf("Gucchi Belt");
-        }
-    }
-    else if(a >= 5000)
-    {
-        printf("Levis Bag");
-    }
-    else{
-        printf("Something");
-    }
-    return 0;
-}
+// #include<stdio.h>
+// int main()
+// {
+//     int a;
+//     scanf("%d", &a);
+//     if(a >=10000)
+//     {
+//         printf("Gucchi Bag\n");
+//         if(a > 20000)
+//         {
+//             printf("Gucchi Belt");
+//         }
+//     }
+//     else if(a >= 5000)
+//     {
+//         printf("Levis Bag");
+//     }
+//     else{
+//         printf("Something");
+//     }
+//     return 0;
+// }
 
+// ///////////////////////////////////////// module 3/////////////////////////////////
+// loop (initialization condition increment/decrement)
+// #include<stdio.h>
+// int main()
+// {
+//     int i;
+//     for(i = 10; i <= 14; i = i+1)
+//     {
+//         printf("hellow\n");
+//     }
+//     return 0;
+// }
 
+// while loop
+// #include<stdio.h>
+// int main()
+// {
+//     int i;
+//     i = 0;
+//     while (i<=3)
+//     {
+//         i++;
+//         printf("hellow\n");
+//         printf("%d\n", i);
+        
+//     }
+    
+//     return 0;
+// }
+// do wile loop
+// #include<stdio.h>
+// int main()
+// {
+//     int i = 0;
+
+//     do
+//     {
+//         i++;
+//         printf("hellow\n");
+//         printf("%d\n", i+1);
+  
+//     } 
+//     while (i <= 3);
+
+//     return 0;
+// }
+
+// ctrl + c to stop infinity loop
+// be careful about char type data and follow the following code
+// #include<stdio.h>
+// int main()
+// {
+//     int A;
+//     long long int B;
+//     float C;
+//     char D;
+//     scanf("%d", &A);
+//     scanf("%lld", &B);
+//     scanf("%f", &C);
+//     scanf(" %c", &D);
+//     printf("%d\n",A);
+//     printf("%lld\n",B);
+//     printf("%0.2f\n",C);
+//     printf("%c", D);
+//     return 0; 
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int N;
+//     scanf("%d", &N);
+//     int i;
+//     for(i=1;i<=N;i++)
+//     {
+//         if(i % 5==0)
+//         {
+//             printf("%d ",i);
+//             printf("Yes\n");
+//         }
+//         else
+//         {
+//             printf("%d ", i);
+//             printf("No\n");
+//         }
+//     }
+//     return 0; 
+// }
