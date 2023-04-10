@@ -342,3 +342,191 @@
 //     }
 //     return 0; 
 // }
+// #include<stdio.h>
+// int main()
+// {
+//     printf("Hello, world! I am learning C programming language. ^_^\n");
+//     printf("Programming is fun and challenging. /\\/\\/\\\n");
+//     printf("I want to give my 100%% dedication to learn!");
+//     printf("\tI will succeed one day.\n");
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int N;
+//     scanf("%d", &N);
+//     if(N > 1000)
+//     {
+//         printf("I will buy Punjabi\n");
+//         if(N>=1500)
+//         {
+//             printf("I will buy new shoes\n");
+//             printf("Alisa will buy new shoes\n");
+
+//         }
+//     }
+//     else
+//     {
+//         printf("Bad luck!");
+//     }
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int A;
+//     int B;
+//     scanf("%d", &A);
+//     scanf("%d", &B);
+//     if(A>=B)
+//     {
+//         printf("Yes");
+//     }
+//     else
+//     {
+//         printf("No");
+//     }
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int A, B;
+//     scanf("%d%d", &A, &B);
+//     if(A%B==0 || B%A==0)
+//     {
+//         printf("Multiples");
+//     }
+//     else
+//     {
+//         printf("No Multiples");
+//     }
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     printf("abs");
+//     return 0;
+// }
+
+// upper case and lowercase letter conversion
+// #include<stdio.h>
+// int main()
+// {
+//     char a;
+//     scanf("%c", &a);
+//     if(a>='a' && a<='z')
+//     {
+//         int ans = a - 32;
+//         printf("%c", ans);
+//     } 
+//     else
+//     {
+//         int ans = a + 32;
+//         printf("%c", ans);
+//     }
+//     return 0;
+// }
+
+
+// Given a number X. Print "EVEN" if the first digit of X is even number. Otherwise print "ODD".
+
+// For example: In 4569 the first digit is 4, the second digit is 5, the third digit is 6 and the fourth digit is 9.
+// #include<stdio.h>
+// int main()
+// {
+//     int a;
+//     int ans;
+//     scanf("%d", &a);
+//     ans = a / 1000;
+//     if(ans % 2 == 0)
+//     {
+//         printf("EVEN");
+//     }
+//     else
+//     {
+//         printf("ODD");
+//     }
+
+//     return 0;
+// }
+
+// Given a letter X. Determine whether X is Digit or Alphabet and if it is Alphabet determine if it is Capital Case or Small Case.
+// #include<stdio.h>
+// int main()
+// {
+//     char a;
+//     scanf("%c", &a);
+//     if (a >= '0'&& a <= '9')
+//     {
+//         printf("IS DIGIT\n");
+//     }
+//     else
+//     {
+//         printf("ALPHA\n");
+//         if (a >= 'a' && a <= 'z')
+//         {
+//             printf("IS SMALL\n");
+//         }
+//         else
+//         {
+//             printf("IS CAPITAL\n");
+//         }
+        
+//     }
+    
+//     return 0;
+// }
+
+// max min problem
+
+// #include<stdio.h>
+// int main()
+// {
+//     int a, b, c;
+//     scanf("%d%d%d", &a, &b, &c);
+//     if(a <= b && a <= c)
+//     {
+//         printf("%d ", a);
+//     }
+//     else if(b <= a && b <= c)
+//     {
+//         printf("%d ", b);
+//     }
+//     else
+//     {
+//         printf("%d ", c);
+//     }
+
+//     if(a >= b && a >= c)
+//     {
+//         printf("%d\n", a);
+//     }
+//     else if(b >= a && b >= c)
+//     {
+//         printf("%d\n", b);
+//     }
+//     else
+//     {
+//         printf("%d", c);
+//     }
+//     return 0;
+// }
+#include <stdio.h>
+int main()
+{
+    int N;
+    int i;
+    scanf("%d", &N);
+    for(i=1;i<=N;i++)
+    {
+        if(i%2==0)
+        {
+        printf("%d\n", i);
+        }
+    }
+    return 0;
+}
