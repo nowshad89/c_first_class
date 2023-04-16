@@ -1,3 +1,4 @@
-    // scanf("%d", &A);
-    // scanf("%lld", &B);
-    // scanf("%f", &C);
+    // else if (n == m || n == k)
+    // {
+    //     number_of_doll = n;
+    // }
