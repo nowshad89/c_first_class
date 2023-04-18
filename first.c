@@ -1094,3 +1094,68 @@
     
 //     return 0;
 // }
+
+
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+
+//         if (n%i == 0)
+//         {
+//             printf("%d\n", i);
+//         }
+        
+//     }
+    
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int a, b;
+//     scanf("%d%d", &a, &b);
+//     int number_of_candies = a-b;
+//     if (number_of_candies >= 0)
+//     {
+//         printf("%d", number_of_candies);
+//     }
+//     else
+//     {
+//         printf("0");
+//     }
+     
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int ar[n+1];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &ar[i]);
+//     }
+//     int pos, val;
+//     scanf("%d %d", &pos, &val);
+//     for (int i = n; i >= pos+1; i--)
+//     {
+//         ar[i] = ar[i-1];
+//     }
+//     ar[pos] = val;
+//     for (int i = 0; i < n+1; i++)
+//     {
+//         printf("%d ", ar[i]);
+//     }
+    
+    
+//     return 0;
+// }
+
+
