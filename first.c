@@ -1158,4 +1158,28 @@
 //     return 0;
 // }
 
+// string like array
+// #include<stdio.h>
+// int main()
+// {
+//     char a[5];
+//     for (int i = 0; i < 5; i++)
+//     {
+//         scanf("%c", &a[i]);
+//     }
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("%c\n", a[i]);
+//     }
+    
+//     return 0;
+// }
 
+// size of array
+#include<stdio.h>
+int main()
+{
+    int a[5];
+    printf("%d", sizeof(a)/sizeof(int));
+    return 0;
+}
