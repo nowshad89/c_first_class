@@ -1176,10 +1176,66 @@
 // }
 
 // size of array
+// #include<stdio.h>
+// int main()
+// {
+//     int a[5];
+//     printf("%d", sizeof(a)/sizeof(int));
+//     return 0;
+// }
+// null character \0
+// #include<stdio.h>
+// int main()
+// {
+//     char a[6] = "Rahat\0";
+//     char b[8] = "nowshad";
+//     char c[6] = {'m', 'u', 'k', 'i', 't'}; //no garantee to take null
+//     printf("%s\n%s\n%s", a, b, c);
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     char a[6];
+//     scanf("%s", &a);
+//     printf("%s", a);
+//     return 0;
+// }
+
+// gets and fgets to input with space for a string
+// for string related any header file #include<string.h>
+// fgets(name of the array, size(with null), stdin(standard input))
+
+// fgets take enter as input
+
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     // char a[18];
+//     char b[20];
+//     // gets(a);
+//     fgets(b, 26, stdin);
+//     b[26] = '\0';
+//     // printf("%s\n", a);
+//     printf("%s", b);
+//     return 0;
+// }
+
+// length of a string
+// #include<string.h>          strlen() to find the length of a function
 #include<stdio.h>
 int main()
 {
-    int a[5];
-    printf("%d", sizeof(a)/sizeof(int));
+    char a[100];
+    scanf("%s", a);
+    int count = 0;
+    for (int i = 0; a[i] != '\0'; i++)
+    {
+        count++;
+    }
+    printf("%d", count);
     return 0;
 }
+
