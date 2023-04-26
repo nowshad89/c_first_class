@@ -1,4 +1,2 @@
-        // else if (s[i] > 'A' || s[i] < 'Z')
-        // {
-        //     capital_count++;
-        // }
+
+        if (a[i] == x)
