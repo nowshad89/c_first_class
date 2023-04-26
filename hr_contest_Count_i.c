@@ -1,3 +1,5 @@
+// You will be given an integer array A of size N. You need to count the number of even elements and the number of odd elements in the array and print them.
+
 #include<stdio.h>
 int main()
 {
