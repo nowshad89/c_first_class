@@ -1225,17 +1225,248 @@
 
 // length of a string
 // #include<string.h>          strlen() to find the length of a function
-#include<stdio.h>
-int main()
-{
-    char a[100];
-    scanf("%s", a);
-    int count = 0;
-    for (int i = 0; a[i] != '\0'; i++)
-    {
-        count++;
-    }
-    printf("%d", count);
-    return 0;
-}
+// #include<stdio.h>
+// int main()
+// {
+//     char a[100];
+//     scanf("%s", a);
+//     int count = 0;
+//     for (int i = 0; a[i] != '\0'; i++)
+//     {
+//         count++;
+//     }
+//     printf("%d", count);
+//     return 0;
+// }
 
+
+// ////////////////////////////////copy  string//////////////////////
+
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[100], b[100];
+//     scanf("%s %s", a, b);
+//     for (int i = 0; i <= strlen(b); i++)
+//     {
+//         a[i] = b[i];
+//     }
+//     printf("%s %s", a, b);
+    
+//     return 0;
+// }
+
+// ///////////////////////////////////strcpy///////////////////////
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[100], b[100];
+//     scanf("%s %s", a, b);
+//     strcpy(a,b);
+//     printf("%s %s", a, b);
+    
+//     return 0;
+// }
+
+
+// /////////////////////////lexicographical comparison////////////////
+
+// #include<stdio.h>
+// int main()
+// {
+//     char a[100], b[100];
+//     scanf("%s %s", a, b);
+//     int i = 0;
+//     while (1)
+//     {
+//         if (a[i] == '\0' && b[i] == '\0')
+//         {
+//             printf("Both are same");
+//             break;
+//         }
+//         else if (a[i] == '\0')
+//         {
+//             printf("first one is smaller");
+//             break;
+//         }
+//         else if (b[i] == '\0')
+//         {
+//             printf("second one is smaller");
+//             break;
+//         }
+        
+//         if (a[i] == b[i])
+//         {
+//             i++;
+//         }
+//         else if (a[i] < b[i])
+//         {
+//             printf("first one is smaller");
+//             break;
+//         }
+//         else{
+//             printf("second one is smaller");
+//             break;
+//         }   
+//     }
+    
+//     return 0;
+// }
+// //////////////////////////////////////strcmp/////////////////
+
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[100], b[100];
+//     scanf("%s%s", a, b);
+//     int v = strcmp(a,b);
+//     printf("%d", v);    
+//     return 0;
+// }
+
+
+// ////////////////////////////////////////////string concat////////
+
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[200], b[200];
+//     scanf("%s %s", a, b);
+//     int k = strlen(a);
+//     for (int i = 0; i <= strlen(b); i++)
+//     {
+//         a[k] = b[i];
+//         k++;
+//     }
+//     printf("%s %s", a, b);
+    
+//     return 0;
+// }
+
+// //////////////////////fixed number concat//////////////
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[200], b[200];
+//     scanf("%s %s", a, b);
+//     int k = strlen(a);
+//     for (int i = 0; i <=2; i++)
+//     {
+//         a[k] = b[i];
+//         k++;
+//     }
+//     a[k] = '\0';
+//     printf("%s %s", a, b);
+    
+//     return 0;
+// }
+
+
+// ///////////////////////////////////strcat///////////////////////
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[200], b[200];
+//     scanf("%s %s", a, b);
+//     strcat(a, b);
+//     printf("%s %s", a, b);
+    
+//     return 0;
+// }
+
+////////////////////////////counting array 1 /////////////////
+// it is called frequncy array too
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int a[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+//     int count[7] = {0};
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (a[i] == 0)
+//         {
+//             count[0]++;
+//         }
+//         if (a[i] == 1)
+//         {
+//             count[1]++;
+//         }
+//         if (a[i] == 2)
+//         {
+//             count[2]++;
+//         } 
+//     }
+//     printf("0 - %d\n", count[0]);
+//     printf("1 - %d\n", count[1]);
+//     printf("2 - %d\n", count[2]);
+    
+
+    
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int a[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+//     int count[7] = {0};
+//     for (int i = 0; i < n; i++)
+//     {
+//         int val = a[i];
+//         count[val]++;
+//     }
+//     for (int i = 0; i <= 6; i++)
+//     {
+//         printf("%d - %d\n",i, count[i]);
+//     }
+    
+    
+
+    
+//     return 0;
+// }
+
+// //////////////////////////////////counting array 2 /////////////////
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+//     char a[100];
+//     scanf("%s", a);
+//     int count[26] = {0};
+//     for (int i = 0; i < strlen(a); i++)
+//     {
+//         int value = a[i] - 'a';
+//         count[value]++;
+//     }
+//     for (int i = 0; i < 26; i++)
+//     {
+//         // printf("%c - %d\n",i + 'a', count[i]);
+//         if (count[i] != 0)
+//         {
+//             printf("%c - %d\n",i + 'a', count[i]);
+//         }
+        
+//     }
+    
+    
+//     return 0;
+// }
