@@ -1,2 +1,1 @@
-
-        if (a[i] == x)
+    // printf("%c%d%c",s[0],len, s[len-1]);
