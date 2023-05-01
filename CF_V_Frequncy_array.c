@@ -26,7 +26,7 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    int count[6] = {0};
+    int count[100001] = {0};
     for (int i = 0; i < n; i++)
     {
         int value = a[i];

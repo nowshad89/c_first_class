@@ -1470,3 +1470,308 @@
     
 //     return 0;
 // }
+// ////////////////////////////nested loop//////////////////
+// *
+// **
+// ***
+// ****
+// *****
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         // ek ekta kaj
+//         for (int j = 0; j <= i; j++)
+//         {
+//             printf("%c", '*');
+//         }
+//         printf("\n");
+        
+        
+//     }
+    
+//     return 0;
+// }
+
+// another system of pattern 1
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n, k = 1;
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+
+//         k++;
+//         printf("\n");
+        
+//     }
+    
+//     return 0;
+// }
+// *****
+// ****
+// ***
+// **
+// *
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         // int temp = n;
+//         // k = n;
+//         for (int j = n; j >= i; j--)
+//         {
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+    
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n, k;
+//     scanf("%d", &n);
+//     k= n;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+//         k--;
+        
+//         printf("\n");
+//     }
+    
+//     return 0;
+// }
+
+// ///////////////////pattern 2///////////////
+//      *
+//     ***
+//    *****
+// #include<stdio.h>
+// int main()
+// {
+//     int n, s, k;
+//     scanf("%d", &n);
+//     s= n-1;
+//     k =1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= s; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+//         s--;
+//         k = k+2;
+//         printf("\n");
+//     }
+    
+//     return 0;
+// }
+
+// *******
+//  *****
+//   ***
+//    *
+// #include<stdio.h>
+// int main()
+// {
+//     int n, s, k;
+//     scanf("%d", &n);
+//     s = 0;
+//     k = 2*n-1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= s; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+//         s++;
+//         k=k-2;
+        
+//         printf("\n");
+//     }
+    
+//     return 0;
+// }
+
+////////////////////////////////pattern 3///////
+// 1
+// 1 2
+// 1 2 3 
+// 1 2 3 4
+// #include<stdio.h>
+// int main()
+// {
+//     int n, k =1;
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("%d", j);
+//         }
+//         k++;
+//         printf("\n");
+        
+//     }
+    
+//     return 0;
+// }
+// 1 2 3 4
+// 1 2 3
+// 1 2 
+// 1
+// #include<stdio.h>
+// int main()
+// {
+//     int n, k;
+//     scanf("%d", &n);
+//     k= n;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("%d ", j);
+//         }
+//         k--;
+//         printf("\n");
+        
+//     }
+    
+//     return 0;
+// }
+//////////////////////////////pattern 4///////////// 
+// #include<stdio.h>
+// int main()
+// {
+//     int n, s, k;
+//     scanf("%d", &n);
+//     s = n-1;
+//     k =1;
+//     for (int i = 1; i <= 2*n-1; i++)
+//     {
+//         for (int j = 1; j <= s; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+//         if (i <= n-1)
+//         {
+//             s--;
+//             k = k+2;
+//         }
+//         else
+//         {
+//             s++;
+//             k = k-2;
+//         }
+        
+//         printf("\n");
+        
+//     }
+    
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n, s, k;
+//     scanf("%d", &n);
+//     s = n-1;
+//     k = 1;
+//     for (int i = 1; i <= 2*n - 1; i++)
+//     {
+//         for (int j = 1; j <= s; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+//         if (i <= n-1)
+//         {
+//             s--;
+//             k = k+2;
+//         }
+//         else
+//         {
+//             s++;
+//             k = k-2;
+//         }
+        
+//         printf("\n");
+        
+        
+//     }
+    
+//     return 0;
+// }
+//////////////////sum of two values equal x/////////
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int a[n], k;
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+//     int x;
+//     scanf("%d", &x);
+//     int flag = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = i+1; j < n; j++)
+//         {
+//             // printf("%d + %d = %d\n", a[i], a[j], a[i]+a[j]);
+//             if (a[i] + a[j] == x)
+//             {
+//                 flag = 1;
+//             }
+            
+//         }
+//     }
+//     if (flag == 0)
+//     {
+//         printf("NO\n");
+//     }
+//     else
+//     {
+//         printf("YES\n");
+//     }
+    
+    
+//     return 0;
+// }
