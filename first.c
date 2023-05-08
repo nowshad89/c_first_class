@@ -1751,7 +1751,7 @@
 //     int x;
 //     scanf("%d", &x);
 //     int flag = 0;
-//     for (int i = 0; i < n; i++)
+//     for (int i = 0; i < n-1; i++)
 //     {
 //         for (int j = i+1; j < n; j++)
 //         {
@@ -1775,3 +1775,542 @@
     
 //     return 0;
 // }
+
+// //////////////////////////////////selection sort algorithm\\\\\\\\\\\\\\\\
+
+// #include<stdio.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int a[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+//     // // ascending sort
+//     // for (int i = 0; i < n-1; i++)
+//     // {
+//     //     for (int j = i+1; j < n; j++)
+//     //     {
+//     //         if (a[i] > a[j])
+//     //         {
+//     //             int temp = a[i];
+//     //             a[i] = a[j];
+//     //             a[j] = temp;
+//     //         }       
+//     //     }    
+//     // }
+
+//     // // descending sort
+//     for (int i = 0; i < n-1; i++)
+//     {
+//         for (int j = i+1; j < n; j++)
+//         {
+//             if (a[i] < a[j])
+//             {
+//                 int temp = a[i];
+//                 a[i] = a[j];
+//                 a[j] = temp;
+//             }   
+//         }    
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ", a[i]);
+//     }
+//     return 0;
+// }
+
+/////////////////////////////////////////function //////////////////////////
+// 1) return type + parameter 
+// 2)return type + no parameter
+// 3) no return type + parameter
+// 4) no return type + no parameter
+// #include<stdio.h>
+// int sum(int x, int y)
+// {
+//    int sum = x+y;
+//    return sum; 
+// }
+// int main()
+// {
+//     int s = sum(10, 40);
+//     printf("%d\n", s);
+//     printf("%d\n", sum(30,40));
+//     return 0;
+// }
+
+// if you declare function below the main function it will show an warning
+// in that case you may declare just the function name above the main function.
+// #include<stdio.h>
+// int sum(int x, int y);
+// int main()
+// {
+//     int s = sum(10, 20);
+//     printf("%d", s);
+//     return 0;
+// }
+// int sum(int x, int y)
+// {
+//     int sum = x + y;
+//     return sum;
+// }
+
+// so it is best to declare function abobe the main function
+// #include<stdio.h>
+// int sum(int x, int y)
+// {
+//     int sum = x+y;
+//     return sum;
+// }
+// int main()
+// {
+//     int x,y;
+//     scanf("%d%d", &x, &y);
+//     printf("%d", sum(x,y));
+//     return 0;
+// }
+// if there is no parameter in the function.i can take input in function
+// #include<stdio.h>
+// int sum()
+// {
+//     int a, b;
+//     scanf("%d%d", &a, &b);
+//     int sum = a+b;
+//     return sum;
+// }
+// int main()
+// {
+//     int s = sum();
+//     printf("%d", s);
+//     return 0;
+// }
+
+// if you write void in the function.it will show error if you give value of a
+// function.in contrast if you dont write void and pass value through a function.it 
+// will ignore the value given in the function.
+// #include<stdio.h>
+// int sum(void){
+//     int a,b;
+//     scanf("%d%d", &a, &b);
+//     int sum = a +b;
+//     return sum;
+// }
+// int main()
+// {
+//     int s = sum(); //if you pass any value now, it will show error
+//     printf("%d", s);
+
+//     return 0;
+// }
+
+
+// if the function type is void.it will not return any value.
+// so the value will not be printed in the maib function.
+// in that case,you have to print it in the named functio.for instance, in the sum functn
+// if you wnat a break in function.you have to write return;
+// #include<stdio.h>
+// void sum(int x, int y)
+// {
+//     int sum = x + y;
+
+//     printf("%d", sum);
+// }
+// int main()
+// {
+//     int a,b;
+//     scanf("%d%d", &a, &b);
+//     sum(a, b);
+//     return 0;
+// }
+
+// no retun no parameter
+// everythong will be done in the sum function
+// #include<stdio.h>
+// void sum(void)
+// {
+//     int a, b;
+//     scanf("%d%d", &a, &b);
+//     int sum = a + b;
+//     printf("%d\n", sum);
+// }
+// int main()
+// {
+//     sum();
+//     sum();
+//     return 0;
+// }
+// ///////////////////////////////////// bultin function///////////////
+
+// printf(), scanf(), strlen(), strcpy(), strcmp(), 
+// ceil(), floor(), round(), sqrt(), pow(). abs()(lonf long int e jhamela kore) in that case you have to take <math.h>
+// to use abs() you have to use <stlib.h>
+
+// //////////////////////////////////////scope/////////////////////////////////////
+
+//  to get the memory adress printf("main er adress - %p\n, &s");
+
+// /////////////////////////////pointer//////////////////////////
+
+// pointer is kind of variabe
+// it helps to store memory adress
+// pointer takes 4  byte
+
+// #include<stdio.h>
+// int main()
+// {
+//     int x =10;
+//     int* p = &x;
+//     printf("%p\n", &x);
+//     printf("%p\n", p);
+//     printf("%d\n", *p);
+//     *p = 500;
+//     printf("%d", x);
+//     return 0;
+// }
+
+// value of pointer is the given variable adress. pointer has its own mwmory adress
+// call by value and call by reference
+// relation between pointer and array
+// array and string in function
+// how array works like call by reference in function
+// dereference
+// #include<stdio.h>
+// int main()
+// {
+//     int x = 100;
+//     int *ptr = &x;
+//     printf("%p\n", &x);
+//     printf("%p\n", ptr);
+//     printf("%p\n", &ptr);
+//     x = 200;
+//     printf("%d\n", *ptr);
+//     printf("%d\n", x);
+
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     double x = 5.25;
+//     double *ptr = &x;
+//     double *ptr2 = ptr;
+//     *ptr2 = 40.5;
+//     printf("%0.2lf\n", x);
+//     printf("%0.2lf\n", *ptr);
+//     printf("%d\n", sizeof(ptr));
+//     printf("%0.2lf\n", *ptr2);
+
+//     return 0;
+// }
+
+// //////////////////////call by value/ pass by value////////////////
+// the int x in function is called only value.not memory adress.adree will be different
+// #include<stdio.h>
+// void fun(int x)
+// {
+//     printf("adress of x in fun function is %p\n", &x);
+//     x= 200;
+// }
+// int main()
+// {
+//     int x = 10;
+//     printf("adress of x in main function is %p\n", &x);
+//     printf("%d\n", x);
+//     fun(x);
+//     return 0;
+// }
+
+// ///////////////////////call by reference////////////
+// #include<stdio.h>
+// void fun(int *p)
+// {
+//     // printf("value of p- %p\n", p);
+//     // printf("the value of x in main- %d\n", *p);
+//     *p = 200;
+// }
+// int main()
+// {
+//     int x = 100;
+//     printf("adress of x- %p\n", &x);
+//     fun(&x);
+//     printf("%d", x);
+//     return 0;
+// }
+
+// ////////////////////////////arr[], here arr is a pointer/////
+// #include<stdio.h>
+// int main()
+// {
+//     int ar[5] = {2, 4, 5, 6,7};
+//     printf("adress of 0th index %p\n", &ar[0]);
+//     printf("adress of ar %p\n", ar);
+//     printf("value of 0th index %d\n", ar[0]);
+//     printf("value of ar %d\n", *ar);
+//     printf("value of first index %d\n", ar[1]);
+//     printf("value of first index by deferencing %d\n", *(ar+1));
+//     return 0;
+// }
+
+// ///////////////////////////array in function//////////////////////
+
+// #include<stdio.h>
+// void count_before_zero(int ar[], int size) //ponter akareo receive korajay *ar likhe
+// {
+//     int count = 0;
+//     for (int i = 0; i < size; i++)
+//     {
+//         if (ar[i] == 0)
+//         {
+//             break;;
+//         }
+//         count++;   
+//     }
+//     printf("%d", count);
+    
+// }
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int ar[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &ar[i]);
+//     }
+//     count_before_zero(ar, n);
+//     return 0;
+// }
+
+// ////////////////////////////////////function and string/////////////////////
+// normall array t size nite hoy.but string e lagena.cause string e strlen lage.
+
+
+// #include<stdio.h>
+// #include<string.h>
+// void fun(char ar[]) //ponter akareo receive korajay *ar likhe
+// {
+//     printf("%d", strlen(ar));
+// }
+// int main()
+// {
+//     char ar[6] = "hello";
+//     fun(ar);
+//     return 0;
+// }
+
+
+// ////////////////////////function and array as reference//////////
+
+// #include<stdio.h>
+// void fun(int *ar) //you may use the length of the array here
+// {
+//     ar[0] = 50;
+// }
+// int main()
+// {
+//     int ar[5] = {10, 20, 30, 40, 50};
+//     fun(ar);
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("%d ", ar[i]);
+//     }
+
+//     return 0;
+// }
+
+// #include<stdio.h>
+// void fun(char *ar)
+// {
+//     ar[0] = 'g';
+// }
+// int main()
+// {
+//     char ar[5] = "hello";
+//     fun(ar);
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("%c", ar[i]);
+//     }
+    
+//     return 0;
+// }
+
+
+
+
+// ass
+// #include<stdio.h>
+// int main()
+// {
+//     int n, s,k;
+//     scanf("%d", &n);
+//     s = n-1;
+//     k = 1;
+//     for (int i = 1; i <= 2*n-1; i++)
+//     {
+//         for (int j = 1; j <= s; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("%d", j);
+//         }
+//         if (i <= n-1)
+//         {
+//             s--;
+//             k = k+2;
+//         }
+//         else
+//         {
+//             s++;
+//             k = k-2;
+//         }  
+//         printf("\n");     
+//     }
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     int n,s,k;
+//     scanf("%d", &n);
+//     s = n-1;
+//     k = 1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= s; j++)
+//         {
+//             printf(" ");
+//         }
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("%d", i);
+//         }
+//         s--;
+//         k++;
+//         printf("\n");
+        
+        
+//     }
+    
+//     return 0;
+// }
+// #include<stdio.h>
+// void count_before_zero(int ar[], int size)
+// {
+//     int count = 0;
+//     for (int i = 0; i < size; i++)
+//     {
+//         if (ar[i] == 0)
+//         {
+//             break;;
+//         }
+//         count++;   
+//     }
+//     printf("%d", count);
+    
+// }
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int ar[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &ar[i]);
+//     }
+//     count_before_zero(ar, n);
+//     return 0;
+// }
+
+// four types of function with example
+// Has Return + Parameter
+// #include<stdio.h>
+// int prodResult(int x, int y)
+// {
+//     int product = x * y;
+//     return product;
+// }
+// int main()
+// {
+//     int a,b;
+//     scanf("%d%d", &a, &b);
+//     int prod_result = prodResult(a, b);
+//     printf("product of these two number is %d", prod_result);
+//     return 0;
+// }
+
+// Has Return + No Parameter
+// #include<stdio.h>
+// int subtraction()
+// {
+//     int x ,y;
+//     scanf("%d%d", &x, &y);
+//     int amount_of_vat = x - y;
+//     return amount_of_vat;
+
+// }
+// int main()
+// {
+//     int x = subtraction();
+//     printf("the subtracted value %d", x);
+//     return 0;
+// }
+// No Return + Parameter
+
+// #include<stdio.h>
+// void addition(int x, int y){
+//     int sum = x + y;
+//     printf("%d", sum);
+// }
+// int main()
+// {
+//     int x = 10, y = 20;
+//     addition(x,y);
+//     return 0;
+// }
+
+// No Return + No Parameter
+// #include<stdio.h>
+// void dividation(void)
+// {
+//     float x,y;
+//     scanf("%f%f", &x,&y);
+//     float result = x/y;
+//     printf("%0.2f", result);
+// }
+// int main()
+// {
+//     dividation();
+//     return 0;
+// }
+
+// #include<stdio.h>
+// #include<string.h>
+// int is_palindrome(char ar[])
+// {
+//     int flag = 1;
+//     for (int i = 0; i < strlen(ar); i++)
+//     {
+//         if (ar[i] != ar[strlen(ar)-i-1])
+//         {
+//             flag = 0;
+//         }
+        
+//     }
+//     return flag;
+// }
+// int main()
+// {
+//     char s[11];
+//     scanf("%s", s);
+//     int pal_detection = is_palindrome(s);
+//     printf("%d", pal_detection);
+    
+//     return 0;
+// }
+
+
