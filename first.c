@@ -2172,6 +2172,8 @@
 //     }
 //     return 0;
 // }
+
+// ques 2
 // #include<stdio.h>
 // int main()
 // {
@@ -2198,8 +2200,11 @@
     
 //     return 0;
 // }
+
+// ques 3
+
 // #include<stdio.h>
-// void count_before_zero(int ar[], int size)
+// int count_before_zero(int ar[], int size)
 // {
 //     int count = 0;
 //     for (int i = 0; i < size; i++)
@@ -2210,7 +2215,7 @@
 //         }
 //         count++;   
 //     }
-//     printf("%d", count);
+//     return count;
     
 // }
 // int main()
@@ -2222,7 +2227,8 @@
 //     {
 //         scanf("%d", &ar[i]);
 //     }
-//     count_before_zero(ar, n);
+//     int result = count_before_zero(ar, n);
+//     printf("%d", result);
 //     return 0;
 // }
 
@@ -2259,16 +2265,17 @@
 //     printf("the subtracted value %d", x);
 //     return 0;
 // }
-// No Return + Parameter
 
+// No Return + Parameter
 // #include<stdio.h>
 // void addition(int x, int y){
 //     int sum = x + y;
-//     printf("%d", sum);
+//     printf("sum of these two values is %d", sum);
 // }
 // int main()
 // {
-//     int x = 10, y = 20;
+//     int x, y;
+//     scanf("%d%d", &x, &y);
 //     addition(x,y);
 //     return 0;
 // }
@@ -2280,7 +2287,7 @@
 //     float x,y;
 //     scanf("%f%f", &x,&y);
 //     float result = x/y;
-//     printf("%0.2f", result);
+//     printf("the result of dividation is %0.2f", result);
 // }
 // int main()
 // {
@@ -2288,6 +2295,8 @@
 //     return 0;
 // }
 
+
+// ques 5
 // #include<stdio.h>
 // #include<string.h>
 // int is_palindrome(char ar[])
@@ -2308,9 +2317,204 @@
 //     char s[11];
 //     scanf("%s", s);
 //     int pal_detection = is_palindrome(s);
-//     printf("%d", pal_detection);
+//     if (pal_detection == 1)
+//     {
+//         printf("Palindrome");
+//     }
+//     else
+//     {
+//         printf("Not Palindrome");
+//     }
+//     return 0;
+// }
+
+
+// #include<stdio.h>
+// void valueAlteration(int x)
+// {
+//     x = 10;
+//     printf("value of x in named function %d\n", x);
+// }
+// int main()
+// {
+//     int x =20;
+//     valueAlteration(x);
+//     printf("value of x in main function %d\n", x);
+//     printf("here we see value is not changed");
+//     return 0;
+// }
+// #include<stdio.h>
+// void valueAlteration(int *x)
+// {
+//     *x = 10;
+//     printf("value of x in named function %d\n", *x);
+// }
+// int main()
+// {
+//     int x =20;
+//     valueAlteration(&x);
+//     printf("value of x in main function %d\n", x);
+//     printf("here we see vlue is changed");
+//     return 0;
+// }
+
+
+
+// /////call stack
+///////what is recursion
+/////////////////////////////////////call stack/////////////////
+// call stack mantain function calling
+// #include<stdio.h>
+// void world()
+// {
+//     printf("world start\n");
+//     printf("world end\n");
+// }
+// void hello()
+// {
+//     printf("hello start\n");
+//     world();
+//     printf("hello end\n");
+// }
+// int main()
+// {
+//     printf("main function start\n");
+//     hello();
+//     printf("main function end");
+//     return 0;
+// }
+
+// recursion formal definition.
+// recursion is a type of function that call itself and try to copy that function 
+// for several times.
+// #include<stdio.h>
+// void fun()
+// {
+//     printf("fun");
+//     fun();
+// }
+// int main()
+// {
+//     fun();
+//     printf("this the main function");
+//     return 0;
+// }
+
+// base case means jeta diye recursion thamano hoy
+
+// #include<stdio.h>
+// void fun(int i)
+// {
+//     if(i == 6) return;//base case for controling the function
+//     printf("%d\n", i);
+//     fun(i+1);
+// }
+// int main()
+// {
+//     fun(1);
+//     return 0;
+// }
+
+// #include<stdio.h>
+// void fun(int i)
+// {
+//     if(i == 0) return;//base case for controling the function
+//     printf("%d\n", i);
+//     fun(i-1);
+// }
+// int main()
+// {
+//     fun(5);
+//     return 0;
+// }
+
+// //////////////////////////////array printing using recursion////////////////////
+
+// #include<stdio.h>
+// void fun(int ar[], int n, int i)
+// {
+//     if(i == n) return; ///base case
+//     printf("%d\n", ar[i]);
+//     fun(ar, n, i+1);
+// }
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int ar[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &ar[i]);
+//     }
+//     fun(ar, n, 0);
+//     return 0;
+// }
+
+// recursion age call na kore  pore call korle oita reverse e kaj kore
+// most inmportant
+
+// #include<stdio.h>
+// void fun(int i){
+//     if(i == 6) return;
+//     fun(i+1);
+//     printf("%d\n", i);
+// }
+// int main()
+// {
+//     fun(1);
+//     return 0;
+// }
+
+// ///////////////////////////////////////// length of a string using recursion/////
+
+// #include<stdio.h>
+// int fun(char a[], int i)
+// {
+//     if (a[i] == '\0') return 0;
+//     int l = fun(a, i+1);
+//     return l+1;
+// }
+// int main()
+// {
+//     char a[6] = "hello";
+//     int length = fun(a, 0);
+//     printf("%d", length);
+//     return 0;
+// }
+
+
+// //////////////////////two dimensional array////////////////////////
+
+// //////////////2d array input and output/////////////////
+// #include<stdio.h>
+// int main()
+// {
+//     int a[5][3];
+//     for (int i = 0; i < 5; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             // printf("a[%d][%d] ", i, j);
+//             scanf("%d", &a[i][j]);
+//         }
+        
+//     }
+//     for (int i = 0; i < 5; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             // printf("a[%d][%d] ", i, j);
+//             printf("%d ", a[i][j]);
+//         }
+//         printf("\n");
+        
+//     }
     
 //     return 0;
 // }
+
+// /////////////////////////array printing by row and column
+
+
 
 
