@@ -2515,6 +2515,348 @@
 
 // /////////////////////////array printing by row and column
 
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         } 
+//     }
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             printf("%d ", a[i][j]);
+//         }
+//         printf("\n");
+//     }
 
+//     printf("now taking individual row data\n");
+//     int r;
+//     scanf("%d", &r);
+//     for (int i = 0; i < column; i++)
+//     {
+//         printf("%d ", a[r][i]);
+//     }
+//     printf("\n");
+
+//     printf("now taking individual column\n");
+//     int col;
+//     scanf("%d", &col);
+//     for (int i = 0; i < row; i++)
+//     {
+//         printf("%d ", a[i][col]);
+//     }
+//     printf("\n");
+//     return 0;
+// }
+
+// /////////////////////checking zero matrix//////////////////
+
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     int element = row * column;
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         } 
+//     }
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             printf("%d ", a[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     printf("now checking wheather is it null matrix or not\n");
+
+//     int count = 0;
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             if (a[i][j] == 0)
+//             {
+//                 count++;
+//             }
+            
+//         }
+//     }
+//     if (element == count)
+//     {
+//         printf("its a null matrix");
+//     }
+//     else
+//     {
+//         printf("its not null");
+//     }
+    
+//     return 0;
+// }
+
+
+// ////////////////////checking primary diagonal matrix///////////
+
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         }
+//     }
+//     int flag = 1;
+//     if (row != column)
+//     {
+//         flag = 0;
+//     }
+    
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             if (i == j)
+//             {
+//                 continue;
+//             }
+//             if (a[i][j] != 0)
+//             {
+//                 flag = 0;
+//             }
+//         }   
+//     }
+//     if (flag == 1)
+//     {
+//         printf("the matrix is primary diagonal");
+//     }
+//     else
+//     {
+//         printf("the matrix is not primary diagonal");
+//     }
+    
+    
+//     return 0;
+// }
+
+
+// /////////////////////////checking secondary diagonal////////
+
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         }
+//     }
+//     int flag = 1;
+//     if (row != column)
+//     {
+//         flag = 0;
+//     }
+    
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             if (i+j == row-1)
+//             {
+//                 continue;
+//             }
+//             if (a[i][j] != 0)
+//             {
+//                 flag = 0;
+//             }
+//         }   
+//     }
+//     if (flag == 1)
+//     {
+//         printf("the matrix is secondary diagonal");
+//     }
+//     else
+//     {
+//         printf("the matrix is not secondary diagonal");
+//     }
+    
+    
+//     return 0;
+// }
+
+// ///////////////////////////////////scaler matrix////////////////////
+
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         }
+        
+//     }
+//     int flag = 1;
+//     if (row != column)
+//     {
+//         flag = 0;
+//     }
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             if (i == j)
+//             {
+//                 if (a[i][j] != a[0][0])
+//                 {
+//                     flag = 0;
+//                 }
+//             }
+//             else if (a[i][j] != 0)
+//             {
+//                 flag = 0;
+//             } 
+//         }
+//     }
+//     if (flag == 1)
+//     {
+//         printf("the matrix is scaler");
+//     }
+//     else
+//     {
+//         printf("the matrix is not scaler");
+//     }
+//     return 0;
+// }
+
+
+// //////////////////////////////////// primary identity matrix/////////////
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         }
+        
+//     }
+//     int flag = 1;
+//     if (row != column)
+//     {
+//         flag = 0;
+//     }
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             if (i == j)
+//             {
+//                 if (a[i][j] != 1)
+//                 {
+//                     flag = 0;
+//                 }
+//             }
+//             else if (a[i][j] != 0)
+//             {
+//                 flag = 0;
+//             } 
+//         }
+//     }
+//     if (flag == 1)
+//     {
+//         printf("the matrix is identity matrix");
+//     }
+//     else
+//     {
+//         printf("the matrix is not identity matrix");
+//     }
+//     return 0;
+// }
+
+
+
+// //////////////////////////////////secondary identity matrix///////////////
+
+// #include<stdio.h>
+// int main()
+// {
+//     int row, column;
+//     scanf("%d%d", &row, &column);
+//     int a[row][column];
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             scanf("%d", &a[i][j]);
+//         }
+        
+//     }
+//     int flag = 1;
+//     if (row != column)
+//     {
+//         flag = 0;
+//     }
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             if (i+j == row-1)
+//             {
+//                 if (a[i][j] != 1)
+//                 {
+//                     flag = 0;
+//                 }
+//             }
+//             else if (a[i][j] != 0)
+//             {
+//                 flag = 0;
+//             } 
+//         }
+//     }
+//     if (flag == 1)
+//     {
+//         printf("the matrix is secondary identity matrix");
+//     }
+//     else
+//     {
+//         printf("the matrix is not seconday identity matrix");
+//     }
+//     return 0;
+// }
+
+
+
+
+// ////////////////////////////////////recursion recap/////////////
 
 
